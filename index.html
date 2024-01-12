@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRLD CHNGRS - Coming Soon</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./images/icon.png">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Boostrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      function tryPlayMusic() {
+        const music = document.querySelector('audio');
+        if (music) {
+            music.play().catch(error => console.error('Error trying to play audio:', error));
+        } else {
+            console.error('Audio element not found');
+        }
+      }
+
+      function onFirstInteraction() {
+          tryPlayMusic();
+          document.removeEventListener('mousemove', onFirstInteraction);
+          document.removeEventListener('keydown', onFirstInteraction);
+      }
+
+      document.addEventListener('mousemove', onFirstInteraction);
+      document.addEventListener('keydown', onFirstInteraction);
+
+      document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(tryPlayMusic, 500);
+      });
+        
+    }, 500);
+});
+
+  </script>
+    <!-- <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg" style="background-color: #282828;">            
+            <a class="navbar-brand" href="#home">SONIC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link " href="#join">Join</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQs</a>
+                </li>
+            </ul>
+            </div>
+          </nav>
+    </header> -->
+    <img class="hero-image" src="./images/bg-1.png" alt="Hero Image">
+    <main class="container">
+
+        <!-- Home Section -->
+        
+
+        <!-- Join Section -->
+        <!-- <section id="join" class="row">
+          <div class="col-lg-6">
+            <h1 class="join-desc-subtitle">Join the <span class="join-desc-title">fun.</span></h1>
+          </div>
+          
+          <div class="col-lg-6">
+            <form class="join-form" method="post">
+                <label for="username">Name</label>
+                <input type="text" name="username" id="username" required />
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required />
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" name="cpassword" id="cpassword" required />
+                <button class="btn btn-block join-btn" type="reset" value="Join Now" name="submit-join">Join Now</button>
+                <p class="login-text">Already have an account? <a class="login-link" href="./login.html">Log in</a></p>
+            </form>
+          </div> -->
+
+          
+        
+
+        <!-- Contact Us Section -->
+        <!-- <section id="contact" class="row">
+          <div class="col-lg-6">
+            <h1 class="contact-desc-title">Contact Us</h1>
+            <p class="contact-desc-subtitle">For all enquires regarding our services,  please
+            email us using the form to the right.</p>
+          </div>
+          
+          <div class="col-lg-6">
+            <form action="mailto:niranjanakil31@gmail.com" class="contact-form" method="post">
+                <label for="username">Name</label>
+                <input type="text" name="username" id="username" required />
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" cols="10"></textarea>
+                <button class="btn btn-block submit-btn" type="submit" value="Submit">Submit</button>
+            </form>
+          </div>
+        </section> -->
+        <div class="player-container">
+      
+          
+         
+          <audio src="./audios/hertz.mp3"></audio>
+          
+        
+          <!-- Player Controls -->
+          <div class="player-controls" style="display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          color: #DC2626;">
+          <h4 id="title" style="padding-right: 8px;
+          padding-top: 8px">Press</h4>
+              <!-- <i class="fas fa-random" id="shuffle" title="Shuffle"></i> -->
+              <!-- <i class="fas fa-backward" id="prev" title="Previous"></i> -->
+              <i class="fas fa-play fa-3x main-button" id="play" title="Play"></i>
+              <h4 id="title" style="padding-left: 14px;
+              padding-top: 8px">Play</h4>
+              <!-- <i class="fas fa-forward" id="next" title="Next"></i>
+              <i class="fas fa-repeat" id="loop" title="Loop"></i> -->
+          </div>
+          <div >
+            <img class="banner container" src="./images/banner.png" alt="banner" style="
+              max-width: 100%; 
+              max-height: 100%; 
+              height: auto; 
+            ">
+          </div>
+          <div style="
+          padding-top: 20px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          ">
+          <video
+        className="w-8 mb-6 h-4"
+        controls
+        autoPlay={true}
+        muted
+        loop={true}
+      >
+        <source src="./videos/art.mp4" type="video/mp4" />
+      </video>
+    </div>
+      </div>
+        <!-- FAQ Section -->
+        <section id="faq">
+          <div class="faq">
+            <h1 class="faq-title">Coming Soon</h1>
+            <button class="collapsible">What is the purpose of WRLD CHNGRS?</button>
+            <div class="content">
+              <p>WRLD CHNGR is a unique, AI-driven NFT universe where players control heroes of various classes and body types, each uniquely generated. Our innovative AI technology ensures each hero is one-of-a-kind, with the user 's journey directly influencing their hero's development and the impacts they make in the game and, symbolically, in the real world.</p>
+            </div>
+            <button class="collapsible">What are impacts?</button>
+            <div class="content">
+              <p>Impacts in WRLD CHNGRS refer to the positive actions and achievements you accomplish using your connections here with WRLD CHNGRS. These could align with real-world issues like environmental conservation or social justice. Each Impact not only progresses your impact level but also mirrors positive changes in the real world, emphasizing our game's commitment to making a difference.
+
+              </p>
+            </div>
+            <button class="collapsible"> What are traits?</button>
+            <div class="content">
+              <p>Traits and Auras in WRLD CHNGRS are special visual elements that heroes can earn. Traits might include unique accessories or physical features, while Auras are glowing effects or special atmospheres surrounding your hero. They are rewards for achievements within the universe and make your hero look even cooler and more unique.</p>
+            </div>
+          </div>
+        </section>
+        
+    </main>
+    <footer class="footer-container">
+        <p class="footer-text">Copyrights 2024 | All rights reserved. Powered by Nifty Ark.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");      
+      for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS -->
+    <script src="./anime.js"></script>
+
+  
+</body>
+</html>
