@@ -14,7 +14,7 @@ const shuffleBtn = document.getElementById('shuffle');
 
 const songs = [
     {
-        name: 'hertz',
+        name: 'hertzz',
         displayName: 'Press ',
         artist: 'hertz'
     },
