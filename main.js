@@ -60,21 +60,21 @@ loadSong(songs[songIndex]);
 
 
 // Event Listener for Previous Song, Next Song, Progress Update
-prevBtn.addEventListener('click', prevSong);
-nextBtn.addEventListener('click', nextSong);
-music.addEventListener('timeupdate', updateProgressBar);
-music.addEventListener('ended',  () => (onShuffle ? shuffleSong() : nextSong()));
-progressContainer.addEventListener('click', setProgressBar);
-loopBtn.addEventListener('click', loopSong);
-shuffleBtn.addEventListener('click', shuffleUpdate);
-function onFirstInteraction() {
+// prevBtn.addEventListener('click', prevSong);
+// nextBtn.addEventListener('click', nextSong);
+// music.addEventListener('timeupdate', updateProgressBar);
+// music.addEventListener('ended',  () => (onShuffle ? shuffleSong() : nextSong()));
+// progressContainer.addEventListener('click', setProgressBar);
+// loopBtn.addEventListener('click', loopSong);
+// shuffleBtn.addEventListener('click', shuffleUpdate);
+// function onFirstInteraction() {
     
-    setTimeout(playSong(), 500);
-    document.removeEventListener('mousemove', onFirstInteraction);
-    document.removeEventListener('keydown', onFirstInteraction);
-    document.removeEventListener('scroll', onFirstInteraction);
-}
+//     setTimeout(playSong(), 500);
+//     document.removeEventListener('mousemove', onFirstInteraction);
+//     document.removeEventListener('keydown', onFirstInteraction);
+//     document.removeEventListener('scroll', onFirstInteraction);
+// }
 
-document.addEventListener('mousemove', onFirstInteraction);
-document.addEventListener('keydown', onFirstInteraction);
-document.addEventListener('scroll', onFirstInteraction)
+// document.addEventListener('mousemove', onFirstInteraction);
+// document.addEventListener('keydown', onFirstInteraction);
+// document.addEventListener('scroll', onFirstInteraction)

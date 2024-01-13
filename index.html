@@ -20,35 +20,7 @@
 
 </head>
 <body>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-      function tryPlayMusic() {
-        const music = document.querySelector('audio');
-        if (music) {
-            music.play().catch(error => console.error('Error trying to play audio:', error));
-        } else {
-            console.error('Audio element not found');
-        }
-      }
-
-      function onFirstInteraction() {
-          tryPlayMusic();
-          document.removeEventListener('mousemove', onFirstInteraction);
-          document.removeEventListener('keydown', onFirstInteraction);
-      }
-
-      document.addEventListener('mousemove', onFirstInteraction);
-      document.addEventListener('keydown', onFirstInteraction);
-
-      document.addEventListener('DOMContentLoaded', function() {
-          setTimeout(tryPlayMusic, 500);
-      });
-        
-    }, 500);
-});
-
-  </script>
+  
     <!-- <header class="container-fluid">
         <nav class="navbar navbar-expand-lg" style="background-color: #282828;">            
             <a class="navbar-brand" href="#home">SONIC</a>
